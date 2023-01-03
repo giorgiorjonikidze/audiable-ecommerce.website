@@ -12,9 +12,15 @@ export const ButtonWhite = ({children}) => {
     );
 }
 
+export const ButtonBlack = ({children}) => {
+    return (
+        <button className="w-[160px] h-[48px] bg-black text-white  text-[13px]  hover:text-black hover:bg-white tracking-[1px]">{children}</button>
+    );
+}
+
 export const ButtonSkeleton = ({children}) => {
     return (
-        <button className="w-[160px] h-[48px] bg-white text-black opacity-50   hover:text-lightOrange "> {children} <img src={arrow} className="inline-block ml-[13px]"/> </button>
+        <button className="w-[160px] h-[48px] bg-tranparent text-black opacity-50   hover:text-lightOrange "> {children} <img src={arrow} className="inline-block ml-[13px]"/> </button>
     );
 }
  
