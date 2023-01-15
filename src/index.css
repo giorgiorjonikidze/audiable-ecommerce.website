@@ -2,11 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 body {
   font-family: "Manrope";
+  overflow-x: hidden;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+  position: fixed;
+  top: 5vh;
+  left: 5%;
+  width: 90%;
+  background-color: white;
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.modal_category {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  background-color: white;
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.storeke {
+  height: 1px;
+  background-color: black;
+}
+
+.modal-submit {
+  position: fixed;
+  width: 90%;
+  background-color: white;
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+  left: 33%;
+  top: 5%;
+}
+
+@media screen and (min-width: 760px) {
+  .modal {
+    width: 377px;
+    left: 60%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .modal {
+    width: 377px;
+    left: 60%;
+  }
 }

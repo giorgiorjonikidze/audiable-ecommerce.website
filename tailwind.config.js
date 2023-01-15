@@ -4,9 +4,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        sm: "375px",
-        md: "768px",
-        xl: "1440px",
+        md: "760px",
+        xl: "1400px", 
       },
       colors: {
         orange: "#D87D4A",
@@ -16,6 +15,7 @@ module.exports = {
         white: "#fff",
         grey: "#F1F1F1",
         lightWhite: "#FAFAFA",
+        
       },
       fontFamily: {
         manrope: ["Manrope"],
