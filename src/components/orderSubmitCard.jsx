@@ -3,6 +3,8 @@ import oval from "../assets/Oval.svg";
 import checkIcon from "../assets/Path 4.svg";
 import data from './../store/data';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { cartActions } from './../store/store';
 
 
 const OrderSubmitCard = () => {
@@ -10,9 +12,11 @@ const OrderSubmitCard = () => {
   env.PUBLIC_URL = env.PUBLIC_URL || "http://localhost:3000/";
 
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const goToHomeHandler = () => {
     navigate("/")
+    dispatch(cartActions.removeAll())
   };
 
   return (

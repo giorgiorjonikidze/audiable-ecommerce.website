@@ -177,7 +177,7 @@ const ProductDetails = () => {
           </div>
         </div>
         {/* images  */}
-        <div className="mx-[24px] mb-[120px] flex flex-col gap-[24px] md:flex-row xl:gap-[30px] xl:justify-center">
+        <div className="mx-[24px] mb-[120px] flex flex-col gap-[24px] md:flex-row xl:justify-center xl:gap-[30px]">
           <div className="md:flex md:flex-col">
             <picture>
               <source

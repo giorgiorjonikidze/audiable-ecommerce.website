@@ -48,12 +48,12 @@ const Landing = () => {
       </picture>
       {/* did suratshi ro teqstia  */}
       <div className="px-[24px] xl:px-[165px]">
-        <section className="xl:absolute top-0 mt-[108px]  h-full w-[90%]">
-          <div className="mt-[108px] flex  flex-col items-center justify-center text-white xl:mt-[128px]  xl:items-start">
+        <section className="xl:absolute top-0 mt-[108px] md:flex md:justify-center h-full w-[90%]">
+          <div className="mt-[108px] flex ml-[20px] xl:ml-0 md:ml-[70px] absolute top-[126px] flex-col items-center justify-center text-white xl:mt-[128px]  xl:items-start  xl:top-0 xl:left-0">
             <p className="mb-[16px] text-[14px] tracking-[10px] opacity-50">
               NEW PRODUCT
             </p>
-            <h1 className="mb-[24px] w-[233px] text-[36px] font-bold leading-[40px] tracking-[1.3px] md:w-[360px] md:text-[56px] md:leading-[58px] md:tracking-[2px]">
+            <h1 className="mb-[24px] w-[233px] text-[36px] font-bold leading-[40px] tracking-[1.3px] md:w-[360px] md:text-[56px] md:leading-[58px] md:tracking-[2px] xl:top-0 xl:left-0">
               XX99 Mark II HeadphoneS
             </h1>
             <p className="mb-[28px] w-[300px] text-center text-[15px] font-medium opacity-50 xl:mb-[55px] xl:text-left">
@@ -69,14 +69,14 @@ const Landing = () => {
           </div>
         </section>
         <CategorysComponent />
-        <section className="relative  mb-[24px] box-border  rounded-[8px] bg-orange py-[55px]">
+        <section className="relative h-[600px]  mb-[24px] box-border  rounded-[8px] bg-orange py-[55px]">
           <div className="flex w-full flex-col items-center xl:h-[560px]">
-            <picture className="absolute">
+            <picture className="xl:absolute">
               <source media="(min-width: 1400px)" srcSet={speakerOrangeDesk} />
               <source media="(min-width: 760px)" srcSet={speakerOrangeTab} />
               <img
                 src={speakerOrange}
-                className="z-3 mb-[32px] w-[160px]  md:w-[200px] xl:relative xl:top-[108px] xl:left-[-240px] xl:w-[410px]"
+                className="z-3 mb-[32px] w-[160px]  md:w-[200px] xl:relative xl:top-[48px] xl:left-[-240px] xl:w-[410px]"
               />
             </picture>
             <div className="flex  flex-col items-center xl:absolute xl:left-[660px] xl:top-[133px]">

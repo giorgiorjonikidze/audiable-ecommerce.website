@@ -21,8 +21,11 @@ const Navbar = () => {
     setCartIsVisible(false);
   };
 
+  
+
   const goHomeHandler = () => {
     navigate("/");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const sandwichHandler = () => {
@@ -31,6 +34,7 @@ const Navbar = () => {
 
   const clickhandler = (e) => {
     navigate("/category", { state: e.target.id });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const navButtonHandler = (e) => {
@@ -106,9 +110,9 @@ const Navbar = () => {
       {cartIsVisible && <CartCard closeCart={closeCartHandler} />}
       {showCategorys && (
         <div>
-          <div className="backdrop"></div>
+          <div onClick={sandwichHandler} className="backdrop"></div>
           <div className="modal_category absolute z-50 rounded-b-[8px] bg-white">
-            <section className="mb-[120px] flex flex-col">
+            <section className="mb-[120px] flex flex-col md:flex-row md:h-[340px] md:pt-[30px]">
               <div className="relative mx-[24px] mt-[68px] box-border flex h-[165px] w-[327px] flex-col items-center rounded-[8px] bg-grey pt-[88px] ">
                 <img
                   src={headphonesPng}

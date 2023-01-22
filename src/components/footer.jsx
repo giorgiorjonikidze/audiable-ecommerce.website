@@ -8,11 +8,17 @@ import instagram from "../assets/shared/desktop/icon-instagram.svg";
 import logo from "../assets/audiophile.svg";
 
 import { Fragment } from "react";
+import { useNavigate, Link } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const navButtonHandler = (e) => {
+    navigate("/category", { state: e });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <Fragment>
-      <section className="mb-[120px] box-border flex w-full flex-col items-center px-[24px] md:px-[40px] md:mb-[80px] xl:flex-row-reverse xl:justify-between xl:px-[165px]">
+      <section className="mb-[120px] box-border flex w-full flex-col items-center px-[24px] md:mb-[80px] md:px-[40px] xl:flex-row-reverse xl:justify-between xl:px-[165px]">
         <picture>
           <source media="(min-width: 1400px)" srcSet={manHeadponesDesk} />
           <source media="(min-width: 760px)" srcSet={manHeadponesTab} />
@@ -41,10 +47,14 @@ const Footer = () => {
         <div className="mb-[48px] h-[4px] w-[101px] bg-orange"></div>
         <img src={logo} className="mb-[48px]" />
         <div className="mb-[48px] flex flex-col items-center gap-[16px] text-[13px] tracking-[2px] md:flex-row md:gap-[35px]">
-          <p>Home</p>
-          <p>HEADPHONES</p>
-          <p>SPEAKERS</p>
-          <p>EARPHONES</p>
+          <Link to={"/"}>HOME</Link>
+          <button onClick={() => navButtonHandler("headphones")}>
+            HEADPHONES
+          </button>
+          <button onClick={() => navButtonHandler("speakers")}>SPEAKERS</button>
+          <button onClick={() => navButtonHandler("earphones")}>
+            EARPHONES
+          </button>
         </div>
         <p className="mb-[48px] w-[327px] text-center text-[15px] font-medium tracking-[0.7px] opacity-50 md:w-[670px] md:text-left">
           Audiophile is an all in one stop to fulfill your audio needs. We're a
